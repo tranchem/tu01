@@ -1,0 +1,50 @@
+<!-- BEGIN:LIST -->
+	<script language='javascript'>
+		function editOne(_id){
+				window.location.href='?m=attraction&a=edit&id='+_id;
+		}
+		function deleteOne(_id){
+			if(confirm('Do you want to delete this record?')){
+				window.location.href='?m=attraction&a=delete&id='+_id;
+				
+			}
+		}
+	</script>
+	<br/><h1>Attraction List</h1><br/>
+	<form method='post' enctype='multipart/form-data'>
+		<input type='text' name='txtKeyword' value='{keyword}'/>
+		<input type='submit' value='Search' name='submit'/><br/>
+		<br/>
+		<a class='btn btn-xs btn-primary' href="?m=attraction&a=add">NEW ATTRACTION</a><br/>
+		<div class="table-responsive">
+		<table class="table table-hover table-bordered">
+			<thead>
+				<th>No.</th>
+				<th>Id</th>
+				<th>Attraction Name</th>
+				<th width='200px'>Image</th>
+				<th>Description</th>
+				<th colspan='2'>Action</th>
+			</thead>
+			<tbody>
+			<!-- BEGIN:LS -->
+				<tr>
+					<td>{LS.Nmb}</td>
+					<td>{LS.zone_id}</td>
+					<td>{LS.zone_name}</td>
+					<td><img src='{LS.baseUrl}/eProject01/admin/{LS.avatar_img}' width='200px' height="100px" class="img-reponsive"/></td>
+					<td>{LS.description}</td>
+					<td><a class='btn btn-xs btn-success' href='javascript:void(0)' onclick="editOne('{LS.zone_id}')">Edit</a></td>
+					<td><a class='btn btn-xs btn-danger' href='javascript:void(0)' onclick="deleteOne('{LS.zone_id}')">Delete</a></td>
+				</tr>
+			<!-- END:LS -->
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan='7'>{pagers}</td>
+				</tr>
+			</tfoot>
+		</table>
+		</div>
+	</form>
+<!-- END:LIST -->

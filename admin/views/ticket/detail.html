@@ -1,0 +1,27 @@
+<!-- BEGIN:DETAIL -->
+		<h3>Detail Booking</h3><br/>
+		<h4>ID: {booking_id}</h4>
+		<h4>Number of adults: {number_of_adults}</h4>
+		<h4>Number of children: {number_of_children}</h4>
+		<table border='1' class="table table-hover table-bordered" width='100%'>
+			<thead>
+				<th>No.</th>
+				<th>Zone Name</th>
+				<th>Total Zone Price</th>
+			</thead>
+			<tbody>
+			<!-- BEGIN:LS -->
+				<tr>
+					<td>{LS.Nmb}</td>
+					<td>{LS.zone_name}</td>
+					<td>{LS.sub_total}</td>
+				</tr>
+			<!-- END:LS -->
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan='4'>{pagers}</td>
+				</tr>
+			</tfoot>
+		</table>
+<!-- END:DETAIL -->

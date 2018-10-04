@@ -1,0 +1,116 @@
+.addBtn,.subtrBtn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.addBtn{
+
+  background-image: url('../images/addicon.png');
+  background-size: 50px 50px;
+  width: 50px;
+  height: 50px;
+}
+
+.addBtn:hover{
+
+  background-image: url('../images/addhovericon.png');
+  background-size: 50px 50px;
+}
+
+.subtrBtn{
+  background-image: url('../images/subtracticon.png');
+  background-size: 50px 50px;
+  width: 50px;
+  height: 50px;
+}
+
+.subtrBtn:hover{
+  background-image: url('../images/subtracthovericon.png');
+  background-size: 50px 50px;
+}
+
+.numTicket{
+  font-size: 50px;
+  height: 50px;
+}
+
+.titleHead{
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.ticketLine{
+  margin-bottom: 5px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.ticketHead{
+  padding-left: 30px;
+}
+
+.ticketForm{
+  line-height: 40px;
+}
+
+.zonePic{
+  
+}
+
+.zoneTxt{
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
+
+.placeCheck{
+  display:none;
+}
+
+.placeCheck + label{
+  width:216px;
+  height:144px;
+  border-radius: 10px;
+  text-align: right;
+  position: relative;
+  color: white;
+  font-weight:bolder;
+  font-size: 20px;
+  text-shadow: 1px 1px black;
+}
+
+.placeCheck:checked + label{
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+}
+
+.ticket_info{
+  width:90%;
+  margin:auto;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  line-height:25px;
+}
+
+.place_group{
+  width: 80%;
+  margin:auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 400px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.selectTicket{
+  height: 30px;
+}

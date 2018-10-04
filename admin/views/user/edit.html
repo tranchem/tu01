@@ -1,0 +1,57 @@
+<!-- BEGIN:EDIT -->
+	<br/><h1>User Edit</h1><br/>
+		<div class="row">
+		    <div class="col-md-6 col-sm-12 col-lg-6 col-md-offset-3">
+				<div class="panel panel-default">
+					<div class="panel-heading">USER EDIT
+					</div>
+					<div class="panel-body">
+						<form method='post' action='' enctype='multipart/form-data'>
+							<div class="form-group">
+								<label for="username">User Name *</label>
+								<input name="user_name" class="form-control" type="text" data-validation="required" disabled value="{user_name}">
+								<span id="error_username" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label for="usertype">User Type *</label>
+								<select name="user_type" id="gender" class="form-control">
+									<option value='admin'>Admin</option>
+									<option value='user'>User</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="email">Email *</label>
+								<input name="email" class="form-control" type="text" data-validation="email" value="{email}">
+								<span id="error_email" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label for="dob">Full Name</label>
+								<input type="text" name="full_name" class="form-control" value="{full_name}">
+								<span id="error_fname" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label for="gender">Birthday</label>
+								<input type="date" name="birthday" id="dob" class="form-control" value="{birthday}">
+								<span id="error_birthday" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label for="phone">Gender</label>
+								<select name="gender" class="form-control">
+									<option value="1">Male</option>
+									<option value="0">Female</option>
+								</select>
+								<span id="error_gender" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label for="disc">Address</label>
+								<textarea name="address" class="form-control" rows="3">{address}</textarea>
+							</div>
+							
+							<button id="submit" type="submit" value="submit" class="btn btn-primary center">Submit</button>
+							<a href='?m=user&a=list' class="btn btn-primary center">Cancel</a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- END:EDIT -->

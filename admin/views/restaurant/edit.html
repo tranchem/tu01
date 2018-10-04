@@ -1,0 +1,43 @@
+<!-- BEGIN:EDIT -->
+	<h1>Restaurant Edit</h1><br/>
+	<form method='post' action='' enctype='multipart/form-data'>
+	<div class="table-responsive">
+		<table class="table table-hover table-bordered">
+		<thead>
+			<th></th>
+			<th>Id</th>
+			<th>Restaurant Name</th>
+			<th>Image</th>
+			<th>Description</th>
+			<th colspan='2'>Action</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td><center>Current:</center></td>
+				<td>{zone_id}</td>
+				<td>{zone_name}</td>
+				<td><img src='{LS.baseUrl}/eProject01/admin/{avatar_img}' class="img-responsive" width="400px" /></td>
+				<td>{description}</td>
+				<td colspan="2"></td>
+			</tr>
+			<tr>
+				<td><center>Change:</center></td>
+				<td></td>
+				<td><input type='text' name='txtRes_name' placeholder='Zone name...' value='{curr_name}' />
+				<span style='color:red'>{err_mess}</span>
+				</td>
+				<td>
+					<input class="form-control" type='file' name='res_img'>
+					<span style='color:red'>{err_mes_proImg}</span>
+				</td>
+				<td><textarea class="form-control" rows="5" name='txtRes_dcrt' placeholder='Description...'>{curr_dcrt}</textarea></td>
+				<td><center><input class='btn btn-xs btn-info' type='submit' name='Res_add' value='Save' /></center>
+				</td>
+				<td><center><input class='btn btn-xs btn-danger' type='reset' value="Reset" /></center></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<button class='btn btn-sm btn-default'><a style = 'text-decoration: none !important;color: black' href='?m=restaurant&a=list'>Cancel</a></button>
+	</form>
+<!-- END:EDIT -->

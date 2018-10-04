@@ -1,0 +1,26 @@
+<!-- BEGIN:EDIT -->
+	<br/><h1>Edit Price</h1><br/>
+	<form method='post' enctype='multipart/form-data'>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<th>Id</th>
+				<th>Zone Name</th>
+				<th>Weekend</th>
+				<th>Adult Price</th>
+				<th>Children Price</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{zone_id}</td>
+					<td>{zone_name}</td>
+					<td><input class="form-control" type="number" step="0.01" name="weekend" value="{weekend}"/></td>
+					<td><input class="form-control" type="number" step="0.01" name="adult_price" value="{adult_price}"/></td>
+					<td><input class="form-control" type="number" step="0.01" name="children_price" value="{children_price}"/></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type='submit' class='btn btn-sm btn-info' value='Save' name='price_edit'/>
+		<input type='reset' class='btn btn-sm btn-danger' value='Reset'/>
+		<button class='btn btn-sm btn-warning'><a style = 'text-decoration: none !important;color: #fff' href="?m=price&a=list">Back</a></button>
+	</form>
+<!-- END:LIST -->

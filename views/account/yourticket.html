@@ -1,0 +1,92 @@
+<!-- BEGIN: YOURTICKET -->
+<div class="container">
+<div class="row centered-form">
+<div class="col-md-offset-1 col-md-10">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="text-center panel-title"><h2>Your Ticket</h2></div>
+			<!-- BEGIN: ALERT -->
+				<div class="text-center">
+					You haven't had any ticket yet!
+					<a class="ulink btn btn-primary" href="{baseUrl}/?m=ticket">Book now!</a>
+				</div>
+			<!-- END: ALERT -->
+
+			<!-- BEGIN: SORT -->
+			
+				<div class="row" style="margin: 20px 0px; ">
+					<div class="col-md-1"></div>
+					<div class="col-md-4">
+						Sort By Date:
+						<select id="sortDate" class="selectTicket">
+							<option value="desc" {date_desc}>Newest To Oldest</option>
+							<option value="asc" {date_asc}>Oldest To Newest</option>
+						</select>
+					</div>
+					<div class="col-md-4">
+						Filter by Ticket Status:
+						<select id="sortStatus" class="selectTicket">
+							<option value="all" {status_all}>All</option>
+							<option value="booked" {status_booked}>Booked</option>
+							<option value="cancelled" {status_cancelled}>Cancelled</option>
+							<option value="expired" {status_expired}>Expired</option>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<a href="{baseUrl}/?m=account&a=yourticket" class="ulink btn btn-primary" id="urlSort">Sort</a>
+						<a href="{baseUrl}/?m=account&a=yourticket" class="ulink btn btn-primary">Reset</a>
+					</div>
+					
+				</div>
+			
+			<!-- END: SORT -->
+
+			<!-- BEGIN: TICKET -->
+			<form method="post" id="form{booking_id}">
+				<div class="ticket_info" style="background-color: {ticket_color}; color: {font_color}">
+			    	<b>Number of adults:</b> <span>{number_of_adults}</span><br/>
+					<b>Number of children:</b> <span>{number_of_child}</span><br/>
+					<b>Booked Date:</b> <span>{booking_date}</span><br/>
+					<b>Ticket Date:</b> <span>{ticket_date}</span><br/>
+					<b>Places:</b><br/>
+										
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-2"><b>Zone</b></div>
+						<div class="col-md-3"><b>Adult Price</b></div>
+						<div class="col-md-3"><b>Children Price</b></div>
+						<div class="col-md-3"><b>Total Zone Price</b></div>
+					</div>
+					
+						<!-- BEGIN: TICKETDETAIL -->
+							<div class="row">
+								<div class="col-md-1"></div>
+								<div class="col-md-2">{TICKETDETAIL.zone_name}</div>
+								<div class="col-md-3">{TICKETDETAIL.price_each_adult}$/person</div>
+								<div class="col-md-3">{TICKETDETAIL.price_each_child}$/person</div>
+								<div class="col-md-3">{TICKETDETAIL.sub_total}$</div>
+							</div>
+						<!-- END: TICKETDETAIL -->
+					
+					<b>Total Price:</b> <span>{total}$</span><br/>
+					<b>Ticket Status:</b> <span>{booking_status}</span><br/>
+					<!-- BEGIN: CANCEL -->
+					<div class="row bottom-row">
+			    		<div class="col-md-8"></div>
+			    		<div class="col-md-4">
+			    			<button class="cancelTicket btn btn-danger bottom-btn" type="submit" name="btnCancel" value="{booking_id}" >Cancel Ticket</button>
+			    		</div>
+			    	</div>
+			    	<!-- END: CANCEL -->
+				</div>
+			</form>
+			<!-- END: TICKET -->
+			<!-- BEGIN: PAGE -->
+			<div class="text-center">{pagers}</div>
+			<!-- END: PAGE -->
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<!-- END: YOURTICKET -->

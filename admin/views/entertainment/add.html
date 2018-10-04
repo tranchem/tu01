@@ -1,0 +1,24 @@
+<!-- BEGIN:ADD -->
+	<form method='post' action='?m=entertainment&a=add' enctype='multipart/form-data'>
+		<br/><h1>NEW ENTERTAINMENT</h1><br/>	
+		<span style='color:blue'>{success_add}</span></td>
+		<table class="table table-hover table-bordered">
+			<tbody>
+				<tr>
+					<td colspan='2'><center>Add new:</center></td>
+					<td>
+						<input type='text' name='txtEnt_name' placeholder='Name...'/>
+						<span style='color:red'>{err_res_name}</span>
+					</td>	
+					<td>
+						<input class="form-control" type='file' name='ent_img'>
+						<span style='color:red'>{err_mes_proImg}</span></td>
+					</td>					
+					<td><input type='text' name='txtEnt_dcrt' placeholder='Description...'/></td>
+					<td colspan='2'><center><input type='submit' class='btn btn-xs btn-primary' name='Res_add' value='Add' /></center>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+<!-- END:ADD -->

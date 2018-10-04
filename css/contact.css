@@ -1,0 +1,32 @@
+@font-face{
+font-family: myFont-contactus;
+src: url(../fonts/File.otf);
+}
+.contact
+{
+  margin: auto;
+  float: none;
+  width: 1200px;
+  background-color: white;
+  padding-bottom: 0px;
+}
+.jumbotron
+{
+  padding-top: 20px;
+  margin-top: 50px;
+}
+.jumbotron h2
+{
+  text-align: center;
+}
+.jumbotron h5
+{
+  text-align: justify;
+  padding: 0px 350px;
+}
+.Font
+{
+   font-family: 'myFont-contactus';
+  color:#fcc500;
+  font-size: 45px;
+}

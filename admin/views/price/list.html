@@ -1,0 +1,50 @@
+<!-- BEGIN:LIST -->
+	<script language='javascript'>
+		function editOne(_id){
+				window.location.href='?m=price&a=edit&id='+_id;
+		}
+	</script>
+	<br/><h1>Zone Price List</h1><br/>
+	<form method='post' enctype='multipart/form-data'>
+		Zone name: <input type='text' name='txtKeyword' value='{keyword}'/>
+		Zone group: <select name="select_group">
+			<option value='0'>No select</option>
+			<!-- BEGIN:GROUPLS -->
+			<option value="{GROUPLS.zone_group_id}">{GROUPLS.zone_group_name}</option>
+			<!-- END:GROUPLS -->
+		</select>
+		<input type='submit' value='Search' name='search'/><br/><br/>
+
+		<table class="table table-hover table-bordered">
+			<thead>
+				<th>No.</th>
+				<th>Id</th>
+				<th>Zone Name</th>
+				<th width='200px'>Image</th>
+				<th>Weekend</th>
+				<th>Adult Price</th>
+				<th>Children Price</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+			<!-- BEGIN:LS -->
+				<tr>
+					<td>{LS.Nmb}</td>
+					<td>{LS.zone_id}</td>
+					<td>{LS.zone_name}</td>
+					<td><img src='{LS.baseUrl}/eProject01/admin/{LS.avatar_img}' width='200px' height="100px" class="img-reponsive"/></td>
+					<td>{LS.weekend}</td>
+					<td>{LS.adult_price}</td>
+					<td>{LS.children_price}</td>
+					<td><a class='btn btn-xs btn-success' href='javascript:void(0)' onclick="editOne('{LS.zone_id}')">Edit</a></td>
+				</tr>
+			<!-- END:LS -->
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan='7'>{pagers}</td>
+				</tr>
+			</tfoot>
+		</table>
+	</form>
+<!-- END:LIST -->

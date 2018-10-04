@@ -1,0 +1,41 @@
+<!-- BEGIN:EDIT -->
+	<h1>Ticket Edit</h1><br/>
+	<form method='post'>
+	<div class="table-responsive">
+		<table class="table table-hover table-bordered">
+		<thead>
+			<th></th>
+			<th>Booking Id</th>
+			<th>Ticket Date</th>
+			<th>Status</th>
+			<th colspan="2">Action</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td><center>Current:</center></td>
+				<td>{booking_id}</td>
+				<td>{ticket_date}</td>
+				<td>{booking_status}</td>
+				<td colspan="2"></td>
+			</tr>
+			<tr>
+				<td><center>Change:</center></td>
+				<td></td>
+				<td><input type='date' name='date_edit' required/></td>
+				<td>
+					<select name='status_edit' required>
+						<option value='booked'>Booked</option>
+						<option value='expired'>Expired</option>
+						<option value='cancelled'>Cancelled</option>
+					</select>
+				</td>
+				<td><center><input class='btn btn-xs btn-info' type='submit' name='ticket_edit' value='Save' /></center>
+				</td>
+				<td><center><input class='btn btn-xs btn-danger' type='reset' value="Reset" /></center></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<button class='btn btn-sm btn-default'><a style = 'text-decoration: none !important;color: black' href='?m=ticket&a=list'>Cancel</a></button>
+	</form>
+<!-- END:EDIT -->

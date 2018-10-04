@@ -1,0 +1,130 @@
+<!-- BEGIN: HOME -->
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner ">
+
+      <div class="item active">
+        <img src="images/pic-1.jpg" alt="Outdoor Fun" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Outdoor Fun</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/pic-2.jpg" alt="Indoor Play" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Indoor Play</h3>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="images/pic-3.jpg" alt="Aquarium" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Aquarium</h3>
+        </div>
+
+      </div>
+        <div class="item">
+        <img src="images/pic-4.jpg" alt="Water Park" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Water Park</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/pic-5.jpg" alt="the longest roller coaster" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>The Longest Roller Coaster</h3>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+   <div class="home-ct">
+          <center>
+            <h1>Restaurant</h1>
+          </center>
+            <table class="table">
+              <tr>
+                <!-- BEGIN:RES_IMG -->
+                <td class="col-md-4 col-xs-4"><img src='{baseUrl}/eProject01/admin/{RES_IMG.avatar_img}' class="home-pic img-responsive"/></td>
+                <!-- END:RES_IMG -->
+              </tr>
+              <tr>
+                <!-- BEGIN:RES_NAME -->
+                <td><center><b>{RES_NAME.zone_name}</b></center></td>
+                <!-- END:RES_NAME -->
+              </tr>
+              <tr>
+                <!-- BEGIN:RES_DCRT -->
+                <td><p>{RES_DCRT.description}</p></td>
+                <!-- END:RES_DCRT -->
+              </tr>
+            </table>
+            <a class="btn btn-info" href="http://localhost/eProject01/?m=restaurant">See more</a>
+            <br/>
+          <center>
+            <h1>Entertainment</h1>
+          </center>
+            <table class="table">
+              <tr>
+                <!-- BEGIN:ENT_IMG -->
+                <td class="col-md-4 col-xs-4"><img src='{baseUrl}/eProject01/admin/{ENT_IMG.avatar_img}' class="home-pic img-responsive"/></td>
+                <!-- END:ENT_IMG -->
+              </tr>
+              <tr>
+                <!-- BEGIN:ENT_NAME -->
+                <td><center><b>{ENT_NAME.zone_name}</b></center></td>
+                <!-- END:ENT_NAME -->
+              </tr>
+              <tr>
+                <!-- BEGIN:ENT_DCRT -->
+                <td><p>{ENT_DCRT.description}</p></td>
+                <!-- END:ENT_DCRT -->
+              </tr>
+            </table>
+            <a class="btn btn-info" href="http://localhost/eProject01/?m=entertainment">See more</a>
+            <br/>
+            <center>
+              <h1>Attraction</h1>
+            </center>
+            <table class="table">
+              <tr>
+                <!-- BEGIN:ATT_IMG -->
+                <td class="col-md-4 col-xs-4"><img src='{baseUrl}/eProject01/admin/{ATT_IMG.avatar_img}' class="home-pic img-responsive"/></td>
+                <!-- END:ATT_IMG -->
+              </tr>
+              <tr>
+                <!-- BEGIN:ATT_NAME -->
+                <td><center><b>{ATT_NAME.zone_name}</b></center></td>
+                <!-- END:ATT_NAME -->
+              </tr>
+              <tr>
+                <!-- BEGIN:ATT_DCRT -->
+                <td><p>{ATT_DCRT.description}</p></td>
+                <!-- END:ATT_DCRT -->
+              </tr>
+            </table>
+            <a class="btn btn-info" href="http://localhost/eProject01/?m=attraction">See more</a>
+    </div> 
+<!-- END: HOME -->

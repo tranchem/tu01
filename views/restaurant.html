@@ -1,0 +1,27 @@
+<!-- BEGIN:RESTAURANT -->
+<h1 class="gallery">Restaurant</h1>
+<div class="container">
+  <table class="table ">
+    <!-- BEGIN:LS -->
+    <tr>
+      <td class="img-content-pad"> 
+        <div class="row">
+          <div class="col-md-4 col-xs-4">
+            <img src="{LS.baseUrl}/eProject01/admin/{LS.avatar_img}" class="img-responsive w3-round w3-image" width="400px">
+          </div>
+          <div class="col-md-8 col-xs-8 w3-large text-justify">
+          <h3><b>{LS.zone_name}</b></h3>
+          <h4 style="color: #FF9D67">Adult: {LS.adult_price}$/person</h4>
+          <h4 style="color: #FF9D67">Children: {LS.children_price}$/person</h4>
+          {LS.description}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <!-- END:LS -->
+  </table>
+  <hr style="border: 0.3px solid; opacity: 0.2" />
+  <br/>
+  <span>{pagers}</span>
+</div>
+<!-- END:RESTAURANT -->

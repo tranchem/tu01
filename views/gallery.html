@@ -1,0 +1,31 @@
+<!-- BEGIN:GALLERY -->
+<form method="post">
+  <div class="container">
+  	<h1 class="gallery">Gallery</h1>
+    <div class="form-inline">
+      <div class="form-group">
+        <select class="selectpicker form-control" name="select_zone">
+            <option value='0'>No select</option>
+            <!-- BEGIN:ZONELS -->
+            <option value="{ZONELS.zone_id}">{ZONELS.zone_name}</option>
+            <!-- END:ZONELS -->
+        </select>
+      </div>
+      <button type='submit' name='search' class="btn btn-default"/>Search</button>
+    </form>
+    <br/><br/>
+    <div class="direction-reveal direction-reveal--3-grid-flexbox direction-reveal--demo-swing">
+        <!-- BEGIN:LS -->
+        <a href="#" class="direction-reveal__card">
+          <img src="{LS.baseUrl}/eProject01/admin/{LS.gallery_url}" alt="Image" class="img-responsive">
+
+          <div class="direction-reveal__overlay direction-reveal__anim--in">
+            <p class="direction-reveal__text">{LS.description}</p>
+          </div>
+        </a>
+        <!-- END:LS -->
+    </div>
+    <span>{pagers}</span>
+  </div>
+</form>
+<!-- END:GALLERY -->

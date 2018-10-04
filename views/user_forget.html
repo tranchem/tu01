@@ -1,0 +1,33 @@
+<!-- BEGIN: FORGET -->
+<div class="container">
+<div class="row centered-form">
+<div class="col-md-offset-1 col-md-10">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="text-center panel-title"><h2>Forget Password</h2></div>
+			<form method="post">
+				<div class="alert alert-info">    	
+					 <center>Enter the email you registered account to recover the password</center>
+				</div>
+		    	<div class="row">
+		    		<div class="col-md-4 info_title">Email:</div>
+		    		<div class="col-md-6 info_data"><input type="text" class="form-control input-sm" name="email" value="{txtEmail}"/>
+		    			<br/><span class="err_msg">{err_email}</span>
+						<span class="text-success">{sent_success}</span>
+						<span class="err_msg">{sent_err}</span>
+		    		</div>
+		    	</div>
+		    	<div class="row bottom-row">
+		    		<div class="col-md-8"></div>
+		    		<div class="col-md-4">
+		    			<button class="btn btn-primary bottom-btn" type="submit" name="submit">Submit</button>
+		    			<button type="button" class="btn btn-primary bottom-btn"><a class="ulink" href="{baseUrl}/?m=home">Cancel</a></button>
+		    		</div>
+		    	</div>
+	    	</form>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<!-- END: FORGET -->

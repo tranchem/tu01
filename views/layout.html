@@ -1,0 +1,182 @@
+<!-- BEGIN: LAYOUT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Merciado Amusement Park</title>
+    <link REL="SHORTCUT ICON" HREF="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/contact.css"/>
+    <link rel="stylesheet" type="text/css" href="css/user_login.css"/>
+    <link rel="stylesheet" href="css/direction-reveal.css"/>
+    <link rel="stylesheet" type="text/css" href="css/w3.css"/>
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+
+
+
+</head>
+<body>
+    <div class="bg"></div>
+<header>
+      <a href="{baseUrl}/?m=home" class="logo text-center img-responsive">Merciado Amusement Park</a>
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav ">
+          <li><a href="{baseUrl}/?m=home">HOME</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">ZONE
+            <span class="caret"></span></a>
+              <ul class="dropdown-menu align-center">
+                <li><a href="{baseUrl}/?m=restaurant">Restaurant</a></li>
+                <li><a href="{baseUrl}/?m=attraction">Attraction</a></li>
+                <li><a href="{baseUrl}/?m=entertainment">Entertainment</a></li>
+              </ul>
+          </li>
+          <li><a href="{baseUrl}/?m=gallery">GALLERY</a></li>
+          <li><a href="{baseUrl}/?m=ticket">ONLINE TICKET</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">{signin_status}
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu" style="padding: 20px 15px;min-width: 300px;">
+              <!-- BEGIN: LOGIN -->
+              <li>
+               <form class="form" role="form" method="post" accept-charset="UTF-8" id="login-nav">
+                  <div class="form-group">
+                     <label class="text-right">Email address:</label>
+                     <input type="email" class="form-control" placeholder="Email address" name="txtEmail" value="{txtEmail}">
+                     <br/>
+                     <span class="err_msg">{email_err}</span>
+                  </div>
+                  <div class="form-group">
+                     <label>Password:</label>
+                     <input type="password" class="form-control" placeholder="Password" name="txtPass" value="{txtPass}">
+                     <br/>
+                    <span class="err_msg">{pass_err}</span>
+                  </div>
+                  <div class="form-group">
+                     <button type="submit" name="login" class="btn btn-success btn-block">Sign in</button>
+                  </div>
+                  <p class="text-center m-t-xs text-sm">
+                    <b>Do not have an account?</b>
+                  <a href="{baseUrl}/?m=user_signup" style="color: blue">Sign Up</a>
+                  </p>
+                  <p class="text-center m-t-xs text-sm">
+                    <b><a href="{baseUrl}/?m=user_forget" style="color: blue">Forget Password?</a></b>
+                  </p>
+               </form>
+              </li>
+              <!-- END: LOGIN -->
+              <!-- BEGIN: LOGGEDUSER -->
+                Hi, {user_name}<br/>
+                <li><a href="{baseUrl}/?m=account&a=info">User Information</a></li>
+                <li><a href="{baseUrl}/?m=account&a=yourticket">Your Ticket</a></li>
+                <li><a href="{baseUrl}/?m=logout">Log Out</a></li>
+              <!-- END: LOGGEDUSER -->
+              <!-- BEGIN: LOGGEDADMIN -->
+                Hi, {admin_name}<br/>
+                <li><a href="{baseUrl}/admin/?m=restaurant&a=list">Admin Panel</a></li>
+                <li><a href="{baseUrl}/?m=logout">Log Out</a></li>
+              <!-- END: LOGGEDADMIN -->
+            </ul>
+          </li>
+          <li><a href="{baseUrl}/?m=contactus">CONTACT US</a></li>
+          <li><a href="{baseUrl}/?m=aboutus">ABOUT US</a></li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+ 
+    <div>
+       {acontent}
+    </div> 
+
+  <footer>
+  <section class="nb-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="footer-single">
+            <img src="images/favico.png" class="img-responsive" alt="Logo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus felis diam, vulputate in risus eu, porttitor condimentum purus. Phasellus ullamcorper, odio id feugiat bibendum.</p>
+            <a href="{baseUrl}/?m=aboutus" class="btn btn-footer">Read More</a>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="footer-single useful-links">
+            <div class="footer-title"><h2>Navigation</h2></div>
+            <ul class="list-unstyled">
+              <li><a href="{baseUrl}/?m=home">Home <i class="fa fa-angle-right pull-right"></i></a></li>
+              <li><a href="{baseUrl}/?m=gallery">Gallery <i class="fa fa-angle-right pull-right"></i></a></li>
+              <li><a href="{baseUrl}/?m=ticket">Online Ticket <i class="fa fa-angle-right pull-right"></i></a></li>
+              <li><a href="{baseUrl}/?m=aboutus">About Us <i class="fa fa-angle-right pull-right"></i></a></li>
+              <li><a href="{baseUrl}/?m=contactus">Contact Us <i class="fa fa-angle-right pull-right"></i></a></li>
+              <li><a href="{baseUrl}/?m=sitemap">Site Map <i class="fa fa-angle-right pull-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 ">
+          <div class="footer-single">
+            <div class="footer-title"><h2>Contact Information</h2></div>
+            <address>
+            Aptech Building, 43 Kim Dong, Hoang Mai, Ha Noi, Viet Nam<br>
+            <i class="fa fa-phone"></i>  987 654 3210 <br>
+            <i class="fa fa-fax"></i> 012 123 2345<br>
+            <i class="fa fa-envelope"></i> merciadopark@gmail.com<br>
+            </address>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <hr style="border: solid 1px gray;" />
+
+  <section class="nb-copyright">
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-6 copyrt xs-center">
+    2018 © All Rights Reserved. <a href="">Terms & Conditions</a> | <a href="">Privacy Policy</a> | <a href="images/user_guide.pdf" download>User Guide</a>
+  </div>
+  <div class="col-sm-6 text-right xs-center">
+    <ul class="list-inline footer-social">
+      <li><a href="{baseUrl}/?m=home"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="{baseUrl}/?m=home"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="{baseUrl}/?m=home"><i class="fa fa-youtube-play"></i></a></li>
+      <li><a href="{baseUrl}/?m=home"><i class="fa fa-google-plus"></i></a></li>
+      <li><a href="{baseUrl}/?m=home"><i class="fa fa-skype"></i></a></li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  </section>
+  </footer>
+
+  <div id="topBtn" onClick="topFunction()"></div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/jqueryv1.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/parallax.min.js"></script> 
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/bundle.js"></script>
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
+<!-- END: LAYOUT -->

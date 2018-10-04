@@ -1,0 +1,31 @@
+<!-- BEGIN:ADD -->
+	<form method='post' action='?m=gallery&a=add' enctype='multipart/form-data'>
+		<br/><h3>New Gallery</h3><br/>
+		<span style='color:blue'>{success_add}</span></td>
+		<table class="table table-hover table-bordered">
+			<tbody>
+				<tr>
+					<td colspan='2'><center>Add new:</center></td>
+					<td>
+						Select Zone:
+						<select name="select_zone">
+							<!-- BEGIN:ZONELS -->
+							<option value="{ZONELS.zone_id}">{ZONELS.zone_name}</option>
+							<!-- END:ZONELS -->
+						</select>
+						<span style='color:red'>{err_res_name}</span>
+					</td>	
+					<td>
+						<input class="form-control" type='file' multiple='multiple' name='gallery_img[]'>
+						<span style='color:red'>{err_mes_proImg}</span></td>
+					</td>
+					<td>
+						<td><textarea name='description' placeholder='Description...' rows="4" cols="50"></textarea></td>
+					</td>					
+					<td colspan='2'><center><input type='submit' class='btn btn-xs btn-primary' name='gal_add' value='Add' /></center>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+<!-- END:ADD -->

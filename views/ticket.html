@@ -1,0 +1,126 @@
+<!-- BEGIN: TICKET -->
+<div class="container">
+<div class="row centered-form">
+<div class="col-md-offset-1 col-md-10">
+	<div class="panel panel-default">
+		<div class="panel-heading ticketForm">
+			<form method="post">
+				<div class="text-center panel-title"><h2>Online Ticket</h2></div>
+				<div class="row" id="ticketNo1">
+						<div class="ticketHead"><h3>1. Select the Number of Tickets</h3>
+						Please note that children younger than the age of 3 don't need tickets.<br/></div>
+						
+						<div class="col-md-3 titleHead">Adult (10+)</div>
+						<div class="col-md-3">
+							<button type="button" class="subtrBtn" onclick="personSubtr('adultNum')"></button>
+								<span class="numTicket" id="adultNum">0</span>
+								<input type="hidden" name="txtAdultCount" id="adultCount"/>
+							<button type="button" class="addBtn" onclick="personAdd('adultNum')"></button>
+						</div>
+						<div class="col-md-3 titleHead">Children (3-9)</div>
+						<div class="col-md-3">
+							<button type="button" class="subtrBtn" onclick="personSubtr('childrenNum')"></button>
+								<span class="numTicket" id="childrenNum">0</span>
+								<input type="hidden" name="txtChildrenCount" id="childrenCount"/>
+							<button type="button" class="addBtn" onclick="personAdd('childrenNum')"></button>
+						</div>
+				</div>
+				
+				<div class="row" id="ticketNo2" style="display: none">
+					<hr class="ticketLine" />
+					<div class="ticketHead">
+						<h3>2. Select the date for your tickets</h3>
+						Please note that the price for the tickets on weekends will be slightly higher than weekdays
+						
+						<input name="txtDate" id="ticketDate" value="{ticketDate}"><br/>
+						<span class="err_msg" id="date_err">{date_err}</span>
+					</div>
+				</div>
+				
+				<div class="row" id="ticketNo3" style="display: none">
+					<hr class="ticketLine" />
+					<div class="ticketHead">
+						<h3>3. Select the zones you want to go</h3>
+						Please click on the images of the zones you want to go
+							<!-- BEGIN: ZONEGROUP -->
+							<h4>{zone_group_name}</h4>
+							<div class="place_group" id="{zone_group_name}Places">
+							<!-- BEGIN: ZONE --> 
+							<div class="row">
+								<div class="col-md-5 text-right">
+								<input type="checkbox" class="placeCheck" name="txtPlaces[]" value="{ZONE.zone_id}" id="checkbox{ZONE.zone_id}"/>
+								<label for="checkbox{ZONE.zone_id}"  class="zonePic" style="background-image:url('admin/{ZONE.avatar_img}');background-size: 216px;">
+								</label>
+								</div>
+								<div class="col-md-7">
+								<b><span class="zoneTxtName">{ZONE.zone_name}</span></b><br/>
+								<span class="zoneTxtPrice">
+									Adult: {ZONE.adult_price}$/person<br/>
+									Children: {ZONE.children_price}$/person<br/>
+								</span>
+								</div>
+								</div>
+							<!-- END: ZONE --> 
+							
+							</div>
+							<!-- END: ZONEGROUP -->
+						
+							
+						<br/>
+					<span class="err_msg">{place_err}</span>
+						<div id="allPlaces">
+						</div>
+					</div>
+				</div>
+				
+				<div class="row" id="ticketNo4" style="display: none">
+					<hr class="ticketLine" />
+						<div class="ticketHead">
+							<h3>4. Confirm</h3>
+							Please check if the information below is correct or not
+							<div>
+								<b>Number of adults:</b> <span id="confirmAdult"></span><br/>
+								<b>Number of children:</b> <span id="confirmChildren"></span><br/>
+								<b>Date:</b> <span id="confirmDate"></span><br/>
+								<b>Places:</b><br/>
+								
+									<div class="row">
+										<div class="col-md-1"></div>
+										<div class="col-md-2"><b>No.</b></div>
+										<div class="col-md-3"><b>Zone</b></div>
+										<div class="col-md-3"><b>Adult Price</b></div>
+										<div class="col-md-3"><b>Children Price</b></div>
+									</div>
+								<div id="confirmPlaces">
+								<!-- BEGIN: CONFIRMPLACE -->
+									<div class="row">
+										<div class="col-md-1"></div>
+										<div class="col-md-2">{CONFIRMPLACE.no}</div>
+										<div class="col-md-3">{CONFIRMPLACE.zone_name}</div>
+										<div class="col-md-3">{CONFIRMPLACE.total_adult_price}$</div>
+										<div class="col-md-3">{CONFIRMPLACE.total_children_price}$</div>
+									</div>
+								<!-- END: CONFIRMPLACE -->
+								</div>
+								<b>Total Price:</b> <span id="confirmPrice"></span>$
+							</div>
+							<div class="row">
+								<div class="col-md-8"></div>
+								<div class="col-md-4">
+									<button type="submit" id="bookTicket" class="btn btn-primary bottom-btn" name="bookTicket">Book</button>
+									
+								</div>
+							</div>
+						</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+
+<!-- END: TICKET -->
+

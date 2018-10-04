@@ -1,0 +1,54 @@
+<!-- BEGIN: USEREDIT -->
+<div class="container">
+<div class="row centered-form">
+<div class="col-md-offset-1 col-md-10">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="text-center panel-title"><h2>Editing Information</h2></div>
+			<form method="post">
+		    	<div class="row">
+		    		<div class="col-md-4 info_title">User Name:</div>
+		    		<div class="col-md-6 info_data"><div>{curName}</div>
+		    			<br/><span class="err_msg">{err_name}</span>
+		    		</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col-md-4 info_title">Full Name:</div>
+		    		<div class="col-md-6 info_data"><input type="text" class="form-control input-sm" name="txtFullName" value="{curFullName}"/>
+		    			<br/><span class="err_msg">{err_fname}</span>
+		    		</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col-md-4 info_title">Birthday:</div>
+		    		<div class="col-md-6 info_data"><input type="date" class="form-control input-sm" name="txtBirth" value="{curBirth}"/>
+		    			<br/><span class="err_msg">{err_birth}</span>
+		    		</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col-md-4 info_title">Gender:</div>
+		    		<div class="col-md-6 info_data">
+		    			<input type="radio" name="radioGender" {checkmale} value="1"/> Male
+		    			<input type="radio" name="radioGender" {checkfemale} value="0"/> Female
+		    			<br/><span class="err_msg">{err_gender}</span>
+		    		</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col-md-4 info_title">Address:</div>
+		    		<div class="col-md-6 info_data"><input type="text" class="form-control input-sm" name="txtAddress" value="{curAddress}"/>
+		    			<br/><span class="err_msg">{err_address}</span>
+		    		</div>
+		    	</div>
+		    	<div class="row bottom-row">
+		    		<div class="col-md-8"></div>
+		    		<div class="col-md-4">
+		    			<button class="btn btn-primary bottom-btn" type="submit" name="update">Update</button>
+		    			<a class="ulink btn btn-primary bottom-btn" href="{baseUrl}/?m=account&a=info">Cancel</a>
+		    		</div>
+		    	</div>
+	    	</form>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<!-- END: USEREDIT -->

@@ -1,0 +1,81 @@
+<!-- BEGIN: USERSIGNUP -->
+<div class="container">
+<div class="row centered-form">
+<div class="col-md-offset-1 col-md-10">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+	    		<h3 class="panel-title text-center">Please Register to Merciado Amusement Park</h3>
+	 			</div>
+	 			<div class="panel-body">
+	    		<form role="form" method="post">
+	    			<div class="form-group">
+	    				<input type="text" name="txtUsername" id="user_name" class="form-control input-sm" placeholder="Username*" value="{txtUsername}">
+	    				<br/><span class="err_msg">{err_username}</span>
+	    			</div>
+	    			<div class="row">
+	    				<div class="col-md-6">
+	    					<div class="form-group">
+	                			<input type="text" name="txtFirstName" id="first_name" class="form-control input-sm" placeholder="First Name" value="{txtFirstName}">
+	                			<br/><span class="err_msg">{err_fname}</span>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-6">
+	    					<div class="form-group">
+	    						<input type="text" name="txtLastName" id="last_name" class="form-control input-sm" placeholder="Last Name"  value="{txtLastName}">
+	    						<br/><span class="err_msg">{err_lname}</span>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="form-group">
+	    				<input type="text" name="txtEmail" id="email" class="form-control input-sm" placeholder="Email Address*" value="{txtEmail}">
+	    				<br/><span class="err_msg">{err_email}</span>
+	    			</div>
+
+	    			<div class="row">
+	    				<div class="col-md-6">
+	    					<div class="form-group">
+	    						<input type="password" name="txtPass" id="password" class="form-control input-sm" placeholder="Password*">
+	    						<br/><span class="err_msg">{err_pass}</span>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-6">
+	    					<div class="form-group">
+	    						<input type="password" name="txtPassConfirm" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password*">
+	    						<br/><span class="err_msg">{err_passConfirm}</span>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="form-group">
+                        <input type="date" name="txtBirth" id="birthDate" class="form-control"  value="{txtBirth}">
+                        <br/><span class="err_msg">{err_birth}</span>
+                    </div>
+	                <div class="form-group">
+	                        <input type="text" name="txtAddress" id="address" placeholder="Address" class="form-control"  value="{txtAddress}">
+	                        <br/><span class="err_msg">{err_address}</span>
+	                </div>
+	                <div class="row">
+	    				<div class="col-md-2">
+	    					<div class="form-group">
+	    						<label class="radio-inline">
+	                            	<input type="radio" name="radioGender" id="femaleRadio" value="0">Female
+	                            </label>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-2">
+	    					<div class="form-group">
+	    						<label class="radio-inline">
+	                                <input type="radio" name="radioGender" id="maleRadio" value="1">Male
+	                            </label>
+	    					</div>
+	    				</div>
+	    				<br/><span class="err_msg">{err_gender}</span>
+	    			</div>
+	    			<input type="submit" name="btnSignUp" value="Register" class="btn btn-info btn-block">
+	    		
+	    		</form>
+	    	</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- END: USERSIGNUP -->

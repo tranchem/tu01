@@ -1,0 +1,102 @@
+<!-- BEGIN: CONTACTUS -->
+<div class="contact">
+  <div class="jumbotron">
+          <h2>
+            Get in <span class="Font">Touch with us</span>
+          </h2>
+          <h5>We're here to help! Please call us if you have any questions. You can also contact us by email.
+          <br/>
+          Guests under 18 years of age must have parent or guardian permission to call.</h5>
+  </div>
+  <center>
+    <h4 style='color: green'>{mess_sent_success}</h4>
+    <h4 style='color: red'>{mess_sent_err}</h4>
+  </center>
+  <div>
+      <div class="row">
+          <div class="col-md-8">
+              <div class="well well-sm">
+                  <form method="post">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="name">
+                                  Name</label>
+                              <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required="required" />
+                          </div>
+                          <div class="form-group">
+                              <label for="email">
+                                  Email Address</label>
+                              <div class="input-group">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                  </span>
+                                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required="required" /></div>
+                          </div>
+                          <div class="form-group">
+                              <label for="Country">
+                                  Country</label>
+                              <select id="country" name="country" class="form-control" required="required" placeholder="Choose One:">
+                                  <option value="United States">United States</option>
+                                  <option value="Viet Nam">Viet Nam</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="age">
+                                  Age</label>
+                              <select id="age" name="age" class="form-control" required="required">
+                                  <option value="">-Choose one-</option>
+                                  <option value="Under 10">Under 10</option>
+                                  <option value="10-18">10-18</option>
+                                  <option value="19-30">19-30</option>
+                                  <option value="31-40">31-40</option>
+                                  <option value="41-50">41-50</option>
+                                  <option value="51-60">51-60</option>
+                                  <option value="61-70">61-70</option>
+                                  <option value="71-80">71-80</option>
+                                  <option value="81-90">81-90</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="name">
+                                  Message</label>
+                              <textarea name="message" id="message" class="form-control" rows="13" cols="30" required="required"
+                                  placeholder="Message"></textarea>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                          <button type="submit" class="btn btn-primary pull-right" id="btnContactUs" name="btnContactUs">
+                              Send Message</button>
+                      </div>
+                  </div>
+                  </form>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <form>
+              <legend><span class="glyphicon glyphicon-globe"></span> Our Park</legend>
+              <address>
+                43, Kim Dong Street, Hoang Mai District<br>
+                Hanoi City, Vietnam <br>
+                <i class="fa fa-phone"></i>  987 654 3210 <br>
+                <i class="fa fa-fax"></i> 012 123 2345<br>
+                <i class="fa fa-envelope"></i> merciadopark@gmail.com<br>
+              </address>     
+              <address>
+                  <strong>Support</strong><br>
+                  <a href="#">merciadopark@gmail.com</a>
+              </address>
+              </form>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+    <div id="map"></div>
+  </div>
+</div>
+<script type="text/javascript" src="js/map.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2jU-glwyLz9HZhFw-HADJSCNKBlOEbBg&callback=initMap">
+</script>
+<!-- END: CONTACTUS -->

@@ -1,0 +1,41 @@
+<!-- BEGIN: CHANGEPASS -->
+<div class="container">
+<div class="row centered-form">
+<div class="col-md-offset-1 col-md-10">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="text-center panel-title"><h2>Changing Password</h2></div>
+			<form method="post">
+		    	<div class="row">
+		    		<div class="col-md-4 info_title">Current Password:</div>
+		    		<div class="col-md-6 info_data"><input type="password" class="form-control input-sm" name="txtCurPass" value="{curPass}"/>
+		    			<span class="err_msg">{err_curPass}</span>
+		    		</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col-md-4 info_title">New Password:</div>
+		    		<div class="col-md-6 info_data"><input type="password" class="form-control input-sm" name="txtNewPass" value="{newPass}"/>
+		    			<span class="err_msg">{err_newPass}</span>
+		    		</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col-md-4 info_title">Confirm New Password:</div>
+		    		<div class="col-md-6 info_data"><input type="password" class="form-control input-sm" name="txtPassConfirm" value="{passConfirm}"/>
+		    			<span class="err_msg">{err_passConfirm}</span>
+		    			<span class="text-success">{txt_success}</span>
+		    		</div>
+		    	</div>
+		    	<div class="row bottom-row">
+		    		<div class="col-md-8"></div>
+		    		<div class="col-md-4">
+		    			<button class="btn btn-primary bottom-btn" type="submit" name="change">Change</button>
+		    			<a class="ulink btn btn-primary bottom-btn" href="{baseUrl}/?m=account&a=info">Cancel</a>
+		    		</div>
+		    	</div>
+	    	</form>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<!-- END: CHANGEPASS -->
